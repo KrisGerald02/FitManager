@@ -60,8 +60,8 @@ Las entidades principales que componen el modelo de negocio son:
 
  Nombre Completo | Rol |
 | :--- | :--- |
+| Kristel Geraldine Villalta Porras | Coordinador |
 | Inti Alexander Montalván Góngora | Desarrollador |
-| Kristel Geraldine Villalta Porras | Desarrollador |
 | William Alberto Torres Moreira | Desarrollador |
-| Yubelkis de los Ángeles Rodriguez Montenegro | Desarrollador |
-| Walter Javier López Villega | Desarrollador |
+| Yubelkis de los Ángeles Rodriguez Montenegro | Diseñador |
+| Walter Javier López Villega | Analista |
