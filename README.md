@@ -59,9 +59,9 @@ Las entidades principales que componen el modelo de negocio son:
 ## 👥 Equipo de Desarrollo
 
 | Cif | Nombre Completo | Rol |
-| :--- | :--- | :--- |
-| 23021204 | Inti Alexander Montalván Góngora | Desarrollador |
-| 23020027 | Kristel Geraldine Villalta Porras | Desarrollador |
-| 24010011 | William Alberto Torres Moreira | Desarrollador |
-| 24010243 | Yubelkis de los Ángeles Rodriguez Montenegro | Desarrollador |
-| 24010243 | Walter Javier López Villega | Desarrollador |
+| :--- | :--- |
+| Inti Alexander Montalván Góngora | Desarrollador |
+| Kristel Geraldine Villalta Porras | Desarrollador |
+| William Alberto Torres Moreira | Desarrollador |
+| Yubelkis de los Ángeles Rodriguez Montenegro | Desarrollador |
+| Walter Javier López Villega | Desarrollador |
