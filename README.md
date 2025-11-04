@@ -42,7 +42,7 @@ Las entidades principales que componen el modelo de negocio son:
 | :--- | :--- | :--- |
 | **Framework Principal** | **OpenXava** | Motor de *frontend* automático para desarrollo basado en Java/JPA. |
 | **Lenguaje/Entorno** | **Java Development Kit (JDK 18)** | Entorno de desarrollo para la lógica de negocio. |
-| **Base de Datos** | **PostgreSQL** | Sistema de Gestión de Base de Datos relacional. |
+| **Base de Datos** | **PostgreSQL** | Sistema de Gestión de Base de Datos. |
 
 ---
 
