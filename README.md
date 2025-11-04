@@ -58,7 +58,7 @@ Las entidades principales que componen el modelo de negocio son:
 
 ## 👥 Equipo de Desarrollo
 
-| Cif | Nombre Completo | Rol |
+ Nombre Completo | Rol |
 | :--- | :--- |
 | Inti Alexander Montalván Góngora | Desarrollador |
 | Kristel Geraldine Villalta Porras | Desarrollador |
