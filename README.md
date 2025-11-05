@@ -1,67 +1,81 @@
-# FitManager: Sistema de Gestión de Membresías 
+# 🔨 FerreControl: Sistema de Gestión Comercial y de Existencias (SGC)
 
-## Sobre el Proyecto
+## 📍 Información del Proyecto y Cliente
 
-**FitManager** es un **Sistema de Gestión** diseñado para gimnasios. Su objetivo principal es **automatizar y optimizar** los procesos administrativos críticos relacionados con las membresías de los clientes.
+| Campo | Detalle |
+| :--- | :--- |
+| **Título del proyecto** | **FerreControl para Ferretería Vanessa** |
+| **Nombre del Cliente** | **Ferretería Vanessa** |
+| **Ubicación** | La Dalia, Matagalpa (De la Alcaldía de la Dalia media cuadra arriba) |
+| **Contacto** | Byron Daniel Palacios Hernández (Tel: +505 8624 4743) |
+| **Tipo de Sistema** | Sistema de Gestión Comercial y de Existencias (SGC) |
 
-Este sistema busca resolver la falta de un control unificado y eficiente de la asistencia, membresías y pagos, centralizando la información y automatizando tareas repetitivas para reducir la carga administrativa y mejorar la precisión operativa del gimnasio.
+---
+
+## 📝 Sobre el Proyecto
+
+**FerreControl** es un Sistema de Gestión diseñado para la Ferretería Vanessa. Su objetivo principal es **automatizar y optimizar** los procesos operativos críticos de **gestión de existencias (inventario) y ventas (Punto de Venta)**.
+
+El sistema busca eliminar errores de *stock* y demoras en el proceso de venta, centralizando el catálogo de productos y los movimientos de inventario en tiempo real.
 
 ### Objetivo General
 
-Desarrollar un Sistema de Gestión de Membresías para gimnasios que permita la administración eficiente de clientes, planes, entrenadores, asistencia, pagos y equipos.
+Desarrollar un Sistema de Gestión Comercial y de Existencias que permita la administración eficiente del *stock* y la agilización del proceso de venta a través de un Punto de Venta (TPV).
 
 ### Alcance del Sistema
 
-El sistema cubrirá la **administración completa** de la información de **Clientes** y sus **Membresías**, incluyendo la gestión de **Entrenadores**, la programación de **entrenamientos**, el registro de **Asistencia** y la gestión de **Pagos Recurrentes**.
+El sistema cubrirá la administración completa del **Inventario de Productos**, la gestión de **Clientes** y el módulo principal de **Punto de Venta (TPV)**. Incluirá la **gestión de ajustes de inventario** y **reportes básicos** de ventas.
 
 ---
 
-##  Funcionalidades Clave (Requerimientos Funcionales)
+## ✨ Funcionalidades Clave (Requerimientos Funcionales)
 
 El sistema implementará módulos esenciales de gestión:
 
-* **CRUD** (Crear, Leer, Actualizar, Eliminar) de **Clientes**, **Planes de Membresía** y **Entrenadores**.
-* **Asignación de Membresías:** Permitir asignar una membresía a un cliente, especificando la fecha de inicio y fin.
-* **Registro de Asistencia:** Desarrollar la funcionalidad para el registro rápido de la presencia de los clientes.
-* **Gestión de Pagos Recurrentes:** Modelar el flujo de pagos recurrentes asociados a los planes de membresía, asegurando su trazabilidad.
+* **CRUD de Catálogo:** Gestión de **Productos** (con *stock*, precio de venta y categoría) y **Clientes**.
+* **Registro de Ventas (TPV):** Permitir registrar transacciones de venta de forma rápida, actualizando el inventario automáticamente.
+* **Ajustes de Inventario:** Desarrollar la funcionalidad para registrar **Entradas y Salidas (Ajustes)** de *stock* manuales.
+* **Seguridad:** Autenticación por usuario y contraseña, con control de acceso basado en roles.
 
 ---
 
-##  Arquitectura y Recursos
+## 🏗️ Arquitectura y Recursos
 
 Este proyecto se está desarrollando como parte de la asignatura **Metodología y Programación Orientada a Objetos 1** de la Universidad Americana.
 
 ### Entidades Clave del Dominio
 
 Las entidades principales que componen el modelo de negocio son:
-`Cliente`, `Membresia`, `Clase`, `Entrenador`, `Asistencia`, `Equipo`, `Pago`.
+`Producto`, `Venta`, `Cliente`, `Usuario`.
 
 ### Tecnología y Herramientas
 
-| Tipo | Recurso | Descripción |
-| :--- | :--- | :--- |
-| **Framework Principal** | **OpenXava** | Motor de *frontend* automático para desarrollo basado en Java/JPA. |
-| **Lenguaje/Entorno** | **Java Development Kit (JDK 18)** | Entorno de desarrollo para la lógica de negocio. |
-| **Base de Datos** | **PostgreSQL** | Sistema de Gestión de Base de Datos. |
+| Tipo | Recurso |
+| :--- | :--- |
+| **Framework Principal** | **OpenXava** (Motor de frontend automático para Java/JPA) |
+| **Lenguaje/Entorno** | **Java Development Kit (JDK 18)** |
+| **Base de Datos** | **PostgreSQL** |
 
 ---
 
-##  Actores del Sistema
+## 👥 Actores del Sistema
 
 | Actor / Usuario | Rol Principal |
 | :--- | :--- |
-| **Administrador** | Gestiona los datos principales (planes, equipos, clases), usuarios, y tiene acceso total a reportes y configuraciones. |
-| **Recepcionista** | Gestiona alta/modificación de clientes y membresías, registra la asistencia y procesa los pagos. |
-| **Entrenador** | Consulta la lista de clientes asignados, la programación de clases, y registra potencialmente la asistencia a sus clases. |
+| **Administrador** | Gestión de la configuración, usuarios, y acceso total a reportes. |
+| **Vendedor (Cajero)** | Utiliza el **Punto de Venta (TPV)** para registrar ventas y procesar pagos. |
+| **Encargado de Almacén** | Gestiona el registro de entradas/ajustes de inventario. |
 
 ---
 
-##  Equipo de Desarrollo
+## 🧑‍💻 Equipo de Desarrollo
 
- Nombre Completo | Rol |
-| :--- | :--- |
-| Kristel Geraldine Villalta Porras | Coordinador |
-| Inti Alexander Montalván Góngora | Desarrollador |
-| William Alberto Torres Moreira | Desarrollador |
-| Yubelkis de los Ángeles Rodriguez Montenegro | Diseñador |
-| Walter Javier López Villega | Analista |
+| Cif | Nombre Completo | Rol |
+| :---: | :--- | :--- |
+| 23020027 | **Kristel Geraldine Villalta Porras** | Coordinadora |
+| 23021204 | **Inti Alexander Montalván Góngora** | Desarrollador |
+| 24010011 | **William Alberto Torres Moreira** | Desarrollador |
+| 24010243 | **Yubelkis de los Ángeles Rodriguez Montenegro** | Diseñadora |
+| 24010243 | **Walter Javier López Villega** | Analista |
+
+---
