@@ -7,6 +7,12 @@ import java.time.LocalDate;
 import java.util.Collection;
 
 @Entity @Getter @Setter
+@View(
+    members =
+    "fecha;" +
+    "cliente;" +
+    "tipoComprobante;"
+)
 public class Venta {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
