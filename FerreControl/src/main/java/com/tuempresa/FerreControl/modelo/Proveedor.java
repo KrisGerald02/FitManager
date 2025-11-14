@@ -1,6 +1,8 @@
 package com.tuempresa.FerreControl.modelo;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+
 import org.openxava.annotations.*;
 import lombok.*;
 
@@ -10,16 +12,17 @@ public class Proveedor {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idProveedor;
 
-    @Column(length=50) @Required
+    @Column(length=20) @Required
     private String nombre;
 
-    @Column(length=15)
+    @Max(8)
+    @Column(length=8)
     private String telefono;
 
-    @Column(length=255)
+    @Column(length=150)
     private String direccion;
 
-    //  Relación inversa para que OpenXava maneje bien proveedor - compra
+    // 1..* para que OpenXava maneje bien proveedor - compra
     @OneToMany(mappedBy="proveedor")
     private java.util.Collection<Compra> compras;
 }
