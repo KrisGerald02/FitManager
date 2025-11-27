@@ -40,4 +40,10 @@ public class Producto {
     @Required
     private UnidadMedida unidadMedida;
 
+    @Transient
+    public EstadoStock getEstadoStock() {
+        return stock > 0 ? EstadoStock.EN_STOCK : EstadoStock.SIN_STOCK;
+    }
+
+
 }
