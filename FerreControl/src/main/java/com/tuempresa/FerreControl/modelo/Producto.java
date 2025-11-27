@@ -29,6 +29,21 @@ public class Producto {
     @Min(0)
     private int stock;
 
-    @Column(length=20)
-    private String unidadMedida;
+    //add new stock the user could input an specific range
+    @Min(0)
+    private int stockMinimo;
+
+    @Min(0)
+    private int stockMaximo;
+
+    @Enumerated(EnumType.STRING)
+    @Required
+    private UnidadMedida unidadMedida;
+
+    @Transient
+    public EstadoStock getEstadoStock() {
+        return stock > 0 ? EstadoStock.EN_STOCK : EstadoStock.SIN_STOCK;
+    }
+
+
 }
