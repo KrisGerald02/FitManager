@@ -9,7 +9,7 @@ import lombok.*;
 @Entity @Getter @Setter
 public class Producto {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Hidden
     private int idProducto;
 
     @Column(length=50) @Required
@@ -40,10 +40,8 @@ public class Producto {
     @Required
     private UnidadMedida unidadMedida;
 
-    @Transient
-    public EstadoStock getEstadoStock() {
-        return stock > 0 ? EstadoStock.EN_STOCK : EstadoStock.SIN_STOCK;
-    }
-
+    @Enumerated(EnumType.STRING)
+    @Required
+    private EstadoStock estadoStock;
 
 }
