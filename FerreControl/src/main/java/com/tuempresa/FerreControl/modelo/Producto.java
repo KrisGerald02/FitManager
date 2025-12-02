@@ -10,6 +10,7 @@ import lombok.*;
 @View(
     members =
         "nombre;" +
+        "descripcion;"+
         "categoria;" +
         "marca;"+
         "precioVenta, iva;" +
@@ -24,6 +25,9 @@ public class Producto {
 
     @Column(length=50) @Required
     private String nombre;
+
+    @Column(length=100)
+    private String descripcion;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @DescriptionsList(descriptionProperties="nombre")
