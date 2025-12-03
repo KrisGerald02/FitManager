@@ -21,19 +21,22 @@ public class Proveedor {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idProveedor;
 
-    @Column(length=20, unique = true) @Required
+    @Column(length=50, unique = true) @Required
     private String nombre;
 
-    @Column(length=20, unique = true) @Required
+
+    @Column(length=40, unique = true) @Required
     private String correo;
 
-    @Size(max=8)
-    @Pattern(regexp = "\\d{8}", message = "El telefono debe contener exactamente 8 digitos.")
+
+    @Mask("####-####")
     @Column(length=8)
+    @Required
     private String telefono;
 
-    @Column(length=20)
-    private String departamento;
+    @Enumerated(EnumType.STRING) // Guarda el nombre (ej: MANAGUA) en la BD en lugar del índice
+    @Required
+    private DepartamentoNicaragua departamento;
 
     @Column(length=150)
     private String direccion;

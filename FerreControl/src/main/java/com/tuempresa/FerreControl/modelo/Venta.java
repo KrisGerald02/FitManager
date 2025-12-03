@@ -9,8 +9,7 @@ import org.openxava.annotations.*;
         @View(members =
                 "numero;" + // Solo queda 'numero' como dato de cabecera
                         "cliente;" + // Búsqueda y selección de cliente
-                        "detalles { detalles }" + // Lista de productos (Detalles)
-                        "observaciones"
+                        "detalles { detalles }" // Lista de productos (Detalles)
         )
 })
 public class Venta {
@@ -31,9 +30,6 @@ public class Venta {
     @ListProperties("numeroLinea, producto.nombre, cantidad, precio, importe")
     @AsCollection
     private Collection<DetalleVenta> detalles;
-
-    @Stereotype("TEXT_AREA")
-    private String observaciones;
 
     @PrePersist
     @PreUpdate
@@ -71,11 +67,4 @@ public class Venta {
         this.detalles = detalles;
     }
 
-    public String getObservaciones() {
-        return observaciones;
-    }
-
-    public void setObservaciones(String observaciones) {
-        this.observaciones = observaciones;
-    }
 }

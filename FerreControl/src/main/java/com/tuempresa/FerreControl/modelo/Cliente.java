@@ -13,7 +13,8 @@ import lombok.*;
 @View(members=
         "cedula, estado;" +          // ahora la cédula es clave primaria, se ve en el formulario
                 "nombres; apellidos;" +
-                "telefono; direccion;"
+                "direccion;"+
+                "telefono;"
 )
 public class Cliente {
 
@@ -32,22 +33,20 @@ public class Cliente {
     @Stereotype("ID") // valida unicidad automáticamente en OpenXava
     private String cedula;
 
+    @Mask("####-####")
+    @Column(length=8)
+    @Required
+    private String telefono;
+
+    @Column(length=255)
+    private String direccion;
+
     // Nombres y apellidos pueden repetirse
     @Column(length=50) @Required
     private String nombres;
 
     @Column(length=50) @Required
     private String apellidos;
-
-    // Teléfono con máscara que refleja automáticamente (505) y guion mientras se escribe
-    @Mask("(505) ####-####")
-    @DefaultValue("(505) ") // valor inicial visible en el formulario
-    @Column(length=14)
-    @Required
-    private String telefono;
-
-    @Column(length=255)
-    private String direccion;
 
     @Enumerated(EnumType.STRING)
     @Required

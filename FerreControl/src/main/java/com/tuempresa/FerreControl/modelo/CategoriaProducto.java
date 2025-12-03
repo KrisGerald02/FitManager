@@ -24,6 +24,4 @@ public class CategoriaProducto {
     @Column(length=100)
     private String descripcion;
 
-    //ponerle imagen
-
 }

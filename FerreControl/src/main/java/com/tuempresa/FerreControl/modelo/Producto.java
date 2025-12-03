@@ -61,6 +61,9 @@ public class Producto {
     @Min(0)
     private double precioVenta;
 
+    @Money // Le da formato de moneda (dos decimales, separador de miles, etc.)
+    @Column(precision = 10, scale = 2) // Asegura que el campo tenga precisión de moneda en la DB
+    @DefaultStringValue("C$ ")
     @Min(0)
     private double iva;
 
