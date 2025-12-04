@@ -76,6 +76,13 @@
                 modo="list"
                 icono="printer">
         </accion>
+
+        <!-- Ventas por cliente (agrupado por cliente) -->
+        <accion nombre="printInvoicesByCustomer"
+                clase="com.tuempresa.FerreControl.actions.PrintInvoicesByCustomerAction"
+                modo="list"
+                icono="printer">
+        </accion>
     </controlador>
 
 </controladores>
