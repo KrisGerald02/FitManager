@@ -60,16 +60,6 @@
                 <text><![CDATA[Ficha detallada de producto]]></text>
             </staticText>
 
-            <!-- Información del cliente -->
-            <!-- Etiqueta Cliente -->
-            <staticText>
-                <reportElement x="100" y="60" width="65" height="12"/>
-                <textElement>
-                    <font size="9" isBold="true"/>
-                </textElement>
-                <text><![CDATA[Cliente:]]></text>
-            </staticText>
-
             <!-- Valor Cliente -->
             <staticText>
                 <reportElement x="165" y="60" width="260" height="12"/>

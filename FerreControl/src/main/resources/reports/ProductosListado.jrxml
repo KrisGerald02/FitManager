@@ -6,6 +6,13 @@
               pageWidth="842" pageHeight="595" columnWidth="802"
               leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
 
+    <style name="StockStyle">
+        <conditionalStyle>
+            <conditionExpression><![CDATA[$F{stock}.intValue() < $F{stockMinimo}.intValue()]]></conditionExpression>
+            <style forecolor="#FF0000" isBold="true"/>
+        </conditionalStyle>
+    </style>
+
     <!-- Campos (propiedades de Producto) -->
     <field name="idProducto"          class="java.lang.Integer"/>
     <field name="nombre"              class="java.lang.String"/>
@@ -257,12 +264,13 @@
 
             <!-- Stock -->
             <textField>
-                <reportElement x="555" y="2" width="50" height="14"/>
+                <reportElement x="555" y="2" width="50" height="14" style="StockStyle"/>
                 <textElement textAlignment="Right" verticalAlignment="Middle">
                     <font size="8"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$F{stock}]]></textFieldExpression>
             </textField>
+
 
             <!-- Stock min -->
             <textField>
@@ -319,3 +327,4 @@
     </pageFooter>
 
 </jasperReport>
+
